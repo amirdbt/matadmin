@@ -4,6 +4,9 @@ import SideBar from "./components/Sidebard";
 import Ecommerce from "./components/Ecommerce";
 import "./App.css";
 import { Switch, Route, withRouter } from "react-router-dom";
+import {  ThemeProvider } from '@material-ui/core/styles';
+import theme from "./Utilities/Theme"
+
 
 const Main = withRouter(({ location }) => {
   return (
@@ -23,7 +26,10 @@ const Main = withRouter(({ location }) => {
 function App() {
   return (
     <div>
-      <Main />
+      <ThemeProvider theme={theme}>
+       <Main />
+    </ThemeProvider>
+    
     </div>
   );
 }

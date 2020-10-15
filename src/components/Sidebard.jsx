@@ -14,13 +14,14 @@ import {
   Menu,
   MenuItem,
   Hidden,
-  ListSubheader
+  ListSubheader,
 } from "@material-ui/core";
 import {
   PowerSettingsNew, 
 
 } from "@material-ui/icons";
 import MenuIcon from "@material-ui/icons/Menu";
+import { useLocation } from 'react-router-dom'
 
 const drawerWidth = 230;
 
@@ -82,8 +83,8 @@ const useStyles = makeStyles((theme) => ({
 //    color: "#ffffff",
     "&:hover": {
       color: "#ffffff",
-      borderColor: "#4578e0",
-      background: "rgba(52,58,153,0.36)",
+      // borderColor: "#4578e0",
+      // background: "rgba(52,58,153,0.36)",
     
     },
     // borderBottom: "1px solid #8d8d8d",
@@ -137,6 +138,9 @@ const SideBar = (props) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const classes = useStyles();
+   const location = useLocation()
+   const {pathname} = location
+   console.log(pathname)
   
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -170,40 +174,40 @@ const SideBar = (props) => {
                 </Typography>
               </ListItem>
             </Link> */}
-            <Link className={classes.link} to="/share-records">
-              <ListItem button className={classes.listItems}>
+            <Link className={classes.link} to="/campaign">
+              <ListItem button className={classes.listItems} selected={"/campaign" === pathname}>
               
                 <Typography variant="span">
                   Campaign Monitoring 
                 </Typography>
               </ListItem>
             </Link>
-            <Link className={classes.link} to="/hospitals">
-              <ListItem button className={classes.listItems}>
+            <Link className={classes.link} to="/cryptocurrency">
+              <ListItem button className={classes.listItems} selected={"/cryptocurrency" === pathname}>
                
                 <Typography variant="span">
                   Cryptocurrency
                 </Typography>
               </ListItem>
             </Link>
-            <Link className={classes.link} to="/hospitals">
-              <ListItem button className={classes.listItems}>
+            <Link className={classes.link} to="/banking">
+              <ListItem button className={classes.listItems} selected={"/banking" === pathname}>
                
                 <Typography variant="span">
                   Banking System
                 </Typography>
               </ListItem>
             </Link>
-            <Link className={classes.link} to="/hospitals">
-              <ListItem button className={classes.listItems}>
+            <Link className={classes.link} to="/event">
+              <ListItem button className={classes.listItems} selected={"/event" === pathname}>
                
                 <Typography variant="span">
                   Event Management
                 </Typography>
               </ListItem>
             </Link>
-            <Link className={classes.link} to="/hospitals">
-              <ListItem button className={classes.listItems}>
+            <Link className={classes.link} to="/crm">
+              <ListItem button className={classes.listItems} selected={"/crm" === pathname}>
                
                 <Typography variant="span">
                   Crm
@@ -211,7 +215,7 @@ const SideBar = (props) => {
               </ListItem>
             </Link>
             <Link className={classes.link} to="/ecommerce">
-              <ListItem button className={classes.listItems}>
+              <ListItem button className={classes.listItems} selected={"/ecommerce" === pathname} >
                
                 <Typography variant="span">
                   Ecommerce
