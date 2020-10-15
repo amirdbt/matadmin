@@ -18,7 +18,7 @@ import {
 } from "@material-ui/core";
 import {
   PowerSettingsNew, 
-  Notifications,
+  
   Email,
   Fullscreen
 } from "@material-ui/icons";
@@ -222,6 +222,14 @@ const SideBar = (props) => {
                
                 <Typography variant="span">
                   Ecommerce
+                </Typography>
+              </ListItem>
+            </Link>
+            <Link className={classes.link} to="/products">
+              <ListItem button className={classes.listItems} selected={"/products" === pathname} >
+               
+                <Typography variant="span">
+                  Products
                 </Typography>
               </ListItem>
             </Link>

@@ -63,7 +63,9 @@ const Notification = () => {
               keepMounted
               transformOrigin={{ vertical: "top", horizontal: "right" }}
               elevation={1}
-              className={classes.card}
+             
+              PaperProps={{style:{width: "300px", marginTop: "67px", left: "756px",transformOrigin: "150px 0px",opacity: 1}}}
+             
             >
             
                 <MenuItem className={classes.header}>
