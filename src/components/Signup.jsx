@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme)=>({
         justifyContent: "center",
     },
     formTitle:{
-        marginTop: "-300px"
+        marginTop: "-100px"
     },
     formDetails:{
         marginTop: "60px",
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme)=>({
     }
 }))
 
-const Login = () => {
+const Signup = () => {
     const classes = useStyles()
     return (
         <div className={classes.root}>
@@ -79,20 +79,21 @@ const Login = () => {
                 <div className={classes.bgShaperight}></div>
                 <div className={classes.accountForm}>
                     <div className={classes.formTitle}>
-                        <Typography variant="h4">Log In</Typography>
-                        <Typography component="p">Welcome Back! Please sign in to your Account</Typography>
+                        <Typography variant="h4">Signup</Typography>
+                        <Typography component="p">Sign into your pages ccount</Typography>
 
                        <div className={classes.formDetails}>
-                       <TextField id="outlined-basic" label="Email" variant="outlined" defaultValue="demo@gmail.com" style={{marginBottom:"20px",width:"300px"}} />
-                       <TextField id="outlined-basic" label="Password" variant="outlined" defaultValue="******" style={{marginBottom:"20px",width:"300px"}} />
+                       <TextField id="outlined-basic" label="Full Name" variant="outlined" style={{marginBottom:"20px",width:"300px"}} />
+                       <TextField id="outlined-basic" label="Email" variant="outlined" style={{marginBottom:"20px",width:"300px"}} />
+                       <TextField id="outlined-basic" label="Password" variant="outlined"  style={{marginBottom:"20px",width:"300px"}} />
+                       <TextField id="outlined-basic" label="Confirm Password" variant="outlined"  style={{marginBottom:"20px",width:"300px"}} />
                        </div>
 
-                        <Button  className={classes.accountBtn}>Login</Button>
+                        <Button  className={classes.accountBtn}>Signup</Button>
 
-                        
                       <div style={{ marginLeft:"60px", marginTop:"20px"}}>
-                      <Typography component="p" style={{color:"#ac968c"}}>Don't have an account?</Typography>
-                        <a href="/signup" className={classes.a}> Sign up</a>
+                      <Typography component="p" style={{color:"#ac968c"}}>Already have an account?</Typography>
+                        <a href="/login" className={classes.a}>Return to Sign in</a>
                       </div>
                     </div>
                 </div>
@@ -101,4 +102,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Signup
