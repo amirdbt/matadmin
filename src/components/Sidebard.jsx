@@ -101,22 +101,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#ffffff",
     },
   },
-  footBar: {
-    padding: "15px 60px",
-    display: "flex",
-    alignItems: "center",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    backgroundColor: "#33569f",
-    position: "fixed",
-    bottom: 0,
-    boxShadow: "0px 14px 60px rgba(0,0,0,0.06)",
-    [theme.breakpoints.up("sm")]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-    //   backgroundColor: "#ffffff",
-    },
-  },
+  
   menuButton: {
     marginRight: theme.spacing(2),
     [theme.breakpoints.up("sm")]: {
