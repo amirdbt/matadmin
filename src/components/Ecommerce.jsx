@@ -1,6 +1,9 @@
 import React from 'react'
 import {Typography,makeStyles,Grid,Card,Table,TableBody,TableCell,TableContainer,TableHead,TableRow} from "@material-ui/core"
 import Footer from "./Footer"
+import Emails from "./Chats/Emails"
+import Sales from "./Chats/Sales"
+import Earning from "./Chats/Earning"
 
 const useStyles = makeStyles((theme) => ({
     title:{
@@ -163,8 +166,40 @@ const Ecommerce = () => {
               </Card>
             </Grid>
         </Grid>
-
         <div style={{marginBottom:"20px"}}></div>
+
+        <Grid container>
+            <Grid item xs={12} sm={12}>
+                <Card className={classes.bigCard}>
+                    <Emails />
+                </Card>
+            </Grid>
+
+        </Grid>
+
+        <div style={{marginBottom:"80px"}}></div>
+        <Grid container>
+            <Grid item xs={12} sm={12}>
+                <Card className={classes.bigCard}>
+                    <Sales />
+                </Card>
+            </Grid>
+
+        </Grid>
+
+        <div style={{marginBottom:"80px"}}></div>
+
+        <Grid container>
+            <Grid item xs={12} sm={12}>
+                <Card className={classes.bigCard}>
+                    <Earning />
+                </Card>
+            </Grid>
+
+        </Grid>
+
+        <div style={{marginBottom:"80px"}}></div>
+
         <Grid container>
             <Grid item xs={12} sm={12}>
                 <Card className={classes.bigCard}>
