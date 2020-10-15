@@ -18,10 +18,13 @@ import {
 } from "@material-ui/core";
 import {
   PowerSettingsNew, 
-
+  Notifications,
+  Email,
+  Fullscreen
 } from "@material-ui/icons";
 import MenuIcon from "@material-ui/icons/Menu";
 import { useLocation } from 'react-router-dom'
+import Notification from "./Notification"
 
 const drawerWidth = 230;
 
@@ -249,6 +252,13 @@ const SideBar = (props) => {
           </div>
           <div />
           <div className={classes.appIcons}>
+            <Notification />
+            <IconButton>
+              <Email />
+            </IconButton>
+            <IconButton>
+              <Fullscreen />
+            </IconButton>
             <IconButton
               edge="end"
               aria-label="account of current user"
