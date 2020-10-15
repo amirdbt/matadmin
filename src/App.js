@@ -3,6 +3,7 @@ import Dashboard from "./components/Dashboard";
 import SideBar from "./components/Sidebard";
 import Ecommerce from "./components/Ecommerce";
 import Products from "./components/Products";
+import Profile from "./components/Profile";
 import "./App.css";
 import { Switch, Route, withRouter } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -20,6 +21,7 @@ const Main = withRouter(({ location }) => {
         <Route exact path="/" component={Dashboard} />
         <Route path="/ecommerce" component={Ecommerce} />
         <Route path="/products" component={Products} />
+        <Route path="/profile" component={Profile} />
       </Switch>
     </>
   );

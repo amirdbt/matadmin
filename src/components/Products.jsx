@@ -1,6 +1,7 @@
 import React from 'react'
 import {Grid,Typography,Card,makeStyles,CardActionArea,CardMedia,CardContent} from "@material-ui/core"
 import {Rating} from "@material-ui/lab"
+import Footer from "./Footer"
 
 const useStyles = makeStyles((theme)=>({
     productWrapper: {
@@ -40,6 +41,7 @@ const Products = () => {
     const [value, setValue] = React.useState(2);
 
     return (
+        <>
         <div className="content">
             <Grid container spacing={4}>
                 <Grid item xs={12} sm={6}>
@@ -275,7 +277,10 @@ const Products = () => {
                     </Card>
                 </Grid>
             </Grid>
+            <div style={{marginBottom: "20px"}}></div>
         </div>
+            <Footer />
+            </>
     )
 }
 
