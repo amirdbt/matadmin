@@ -89,7 +89,7 @@ const Signup = () => {
                        <TextField id="outlined-basic" label="Confirm Password" variant="outlined"  style={{marginBottom:"20px",width:"300px"}} />
                        </div>
 
-                        <Button  className={classes.accountBtn}>Signup</Button>
+                        <Button  className={classes.accountBtn} href="/">Signup</Button>
 
                       <div style={{ marginLeft:"60px", marginTop:"20px"}}>
                       <Typography component="p" style={{color:"#ac968c"}}>Already have an account?</Typography>
